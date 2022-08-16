@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {%load static%}
+        <link rel="stylesheet" href=
+        "{% static 'ISSapp/index.css' %}">
+        
+    </head>
+    <body>
+        <h1 class='text'>ISS LOCATION FINDER</h1>
+        <p></p>
+        <h2 class='text'>Select your city to see when the ISS will next pass over</h2>
+        <form class='text' method="POST" id="selection-form">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button submit="button">Click Me!</button>
+            <h3 class='text'>Your city coordinates are lat : {{coords.0}} long : {{coords.1}}</h3>
+        </form>
+        <h2 class='text'>The ISS will next pass over {{text}} :</h2>
+        <h2 class='text'>Date : {{time.date}} Time : {{time.time}} </h2>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

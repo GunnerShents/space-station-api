@@ -1,0 +1,10 @@
+body {
+
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss066e023536.jpg");
+    /* background-color: blueviolet; */
+}
+
+.text {
+    color: white;
+    text-align: center;
+}
